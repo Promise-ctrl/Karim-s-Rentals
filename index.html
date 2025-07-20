@@ -1,0 +1,218 @@
+f<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Karim's House Rentals Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the purple theme and font */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #6A0DAD; /* Deep Purple */
+            color: #F3E8FF; /* Light purple for text */
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white for content areas */
+        }
+        .chat-message-bubble {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 8px 12px;
+            margin-bottom: 8px;
+            max-width: 80%;
+        }
+        .user-message {
+            align-self: flex-end;
+            background-color: #8A2BE2; /* Blue Violet for user messages */
+            color: white;
+        }
+        .ai-message {
+            align-self: flex-start;
+            background-color: #9370DB; /* Medium Purple for AI messages */
+            color: white;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center py-8 px-4 sm:px-6 lg:px-8">
+
+    <!-- Main Container for the Portfolio -->
+    <div class="container max-w-4xl w-full mx-auto p-6 sm:p-8 lg:p-10 rounded-xl shadow-lg">
+
+        <!-- Header Section -->
+        <header class="text-center mb-12">
+            <h1 class="text-5xl sm:text-6xl font-extrabold mb-4 text-white">
+                Mr. Karim's House Rentals
+            </h1>
+            <p class="text-xl sm:text-2xl text-purple-200">
+                Your Gateway to Comfortable Living
+            </p>
+        </header>
+
+        <!-- About Section -->
+        <section class="mb-12 p-6 rounded-lg bg-purple-800 bg-opacity-30 shadow-md">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-white">About Mr. Karim</h2>
+            <p class="text-lg leading-relaxed text-purple-100">
+                Welcome to Mr. Karim's exclusive portfolio of premium house rentals. With years of experience in real estate, Mr. Karim is dedicated to providing comfortable, well-maintained, and desirable homes for rent. Our properties are carefully selected to ensure they meet high standards of quality and offer a serene living experience. We pride ourselves on transparent dealings and excellent tenant support.
+            </p>
+        </section>
+
+        <!-- House Listings Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-center text-white">Our Featured Properties</h2>
+
+            <!-- House 1 -->
+            <div class="bg-purple-800 bg-opacity-30 rounded-xl shadow-lg overflow-hidden mb-8 md:flex">
+                <div class="md:w-1/2">
+                    <img src="images/Gemini_Generated_Image_frquoufrquoufrqu.png" alt="House 1 Exterior" class="w-full h-64 object-cover md:h-full rounded-l-xl">
+                </div>
+                <div class="p-6 md:w-1/2 flex flex-col justify-center">
+                    <h3 class="text-2xl sm:text-3xl font-semibold mb-3 text-white">Spacious Family Home</h3>
+                    <p class="text-purple-100 mb-4">
+                        A beautiful 4-bedroom, 3-bathroom house located in a quiet, family-friendly neighborhood. Features a large backyard, modern kitchen, and easy access to local amenities. Perfect for growing families.
+                    </p>
+                    <ul class="list-disc list-inside text-purple-200 mb-4">
+                        <li>4 Bedrooms, 3 Bathrooms</li>
+                        <li>Spacious Living Areas</li>
+                        <li>Modern Kitchen Appliances</li>
+                        <li>Large Private Garden</li>
+                        <li>Close to Schools & Parks</li>
+                    </ul>
+                    <button class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                        View Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- House 2 -->
+            <div class="bg-purple-800 bg-opacity-30 rounded-xl shadow-lg overflow-hidden md:flex flex-row-reverse">
+                <div class="md:w-1/2">
+                    <img src="images/Gemini_Generated_Image_mkh9ddmkh9ddmkh9.png" alt="House 2 Interior" class="w-full h-64 object-cover md:h-full rounded-r-xl">
+                </div>
+                <div class="p-6 md:w-1/2 flex flex-col justify-center">
+                    <h3 class="text-2xl sm:text-3xl font-semibold mb-3 text-white">Cozy Urban Apartment</h3>
+                    <p class="text-purple-100 mb-4">
+                        A stylish 2-bedroom apartment in the heart of the city, offering stunning views and contemporary design. Ideal for young professionals or couples seeking a vibrant urban lifestyle.
+                    </p>
+                    <ul class="list-disc list-inside text-purple-200 mb-4">
+                        <li>2 Bedrooms, 2 Bathrooms</li>
+                        <li>Open-Plan Living</li>
+                        <li>City Views</li>
+                        <li>Walking Distance to Public Transport</li>
+                        <li>Access to Gym & Pool</li>
+                    </ul>
+                    <button class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Chatbox Section -->
+        <section class="mb-12 p-6 rounded-xl bg-purple-800 bg-opacity-30 shadow-md">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-center text-white">Chat with Our AI Assistant</h2>
+            <div class="flex flex-col h-96 bg-purple-900 bg-opacity-50 rounded-lg p-4 overflow-y-auto mb-4" id="chat-window">
+                <!-- Chat messages will appear here -->
+                <div class="chat-message-bubble ai-message">
+                    Hello! I'm Mr. Karim's AI assistant. How can I help you find your perfect rental home today?
+                </div>
+                <div class="chat-message-bubble user-message">
+                    Hi, tell me about the 4-bedroom house.
+                </div>
+                <div class="chat-message-bubble ai-message">
+                    Certainly! The spacious 4-bedroom family home features 3 bathrooms, a large backyard, and a modern kitchen. It's located in a quiet, family-friendly neighborhood with easy access to schools and parks.
+                </div>
+            </div>
+            <div class="flex">
+                <input type="text" id="chat-input" placeholder="Type your message here..." class="flex-grow p-3 rounded-l-full bg-purple-900 text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                <button id="send-button" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-r-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                    Send
+                </button>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="p-6 rounded-xl bg-purple-800 bg-opacity-30 shadow-md text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-white">Contact Mr. Karim</h2>
+            <p class="text-lg text-purple-100 mb-4">
+                Ready to find your next home? Contact Mr. Karim directly for inquiries or to schedule a viewing.
+            </p>
+            <p class="text-xl font-semibold text-white mb-2">Email: info@karimrentals.com</p>
+            <p class="text-xl font-semibold text-white">Phone: +1 (555) 123-4567</p>
+            <div class="mt-6">
+                <button class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                    Send an Inquiry
+                </button>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        // Basic JavaScript for the AI Chatbox (placeholder functionality)
+        const chatInput = document.getElementById('chat-input');
+        const sendButton = document.getElementById('send-button');
+        const chatWindow = document.getElementById('chat-window');
+
+        // Simple AI responses for demonstration
+        const aiResponses = {
+            "hi": "Hello! How can I assist you with Mr. Karim's house rentals?",
+            "hello": "Hello! How can I assist you with Mr. Karim's house rentals?",
+            "4-bedroom": "The 4-bedroom house is a spacious family home with 3 bathrooms, a large backyard, and a modern kitchen. It's in a quiet, family-friendly neighborhood.",
+            "2-bedroom": "The 2-bedroom apartment is a stylish urban unit with city views, an open-plan living area, and access to a gym and pool. It's ideal for young professionals.",
+            "price": "For detailed pricing and availability, please use the 'Send an Inquiry' button or contact Mr. Karim directly.",
+            "viewing": "To schedule a viewing, please contact Mr. Karim via email or phone. You can find the details in the 'Contact Mr. Karim' section.",
+            "default": "I'm sorry, I don't have enough information to answer that. Could you please rephrase your question or refer to the portfolio sections?"
+        };
+
+        function addMessageToChat(message, type) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('chat-message-bubble');
+            if (type === 'user') {
+                messageDiv.classList.add('user-message');
+            } else {
+                messageDiv.classList.add('ai-message');
+            }
+            messageDiv.textContent = message;
+            chatWindow.appendChild(messageDiv);
+            chatWindow.scrollTop = chatWindow.scrollHeight; // Scroll to bottom
+        }
+
+        sendButton.addEventListener('click', function() {
+            const userMessage = chatInput.value.trim();
+            if (userMessage) {
+                addMessageToChat(userMessage, 'user');
+                chatInput.value = ''; // Clear input
+
+                // Simulate AI response
+                let aiResponse = aiResponses["default"];
+                const lowerCaseMessage = userMessage.toLowerCase();
+
+                if (lowerCaseMessage.includes("hi") || lowerCaseMessage.includes("hello")) {
+                    aiResponse = aiResponses["hi"];
+                } else if (lowerCaseMessage.includes("4-bedroom") || lowerCaseMessage.includes("four bedroom")) {
+                    aiResponse = aiResponses["4-bedroom"];
+                } else if (lowerCaseMessage.includes("2-bedroom") || lowerCaseMessage.includes("two bedroom")) {
+                    aiResponse = aiResponses["2-bedroom"];
+                } else if (lowerCaseMessage.includes("price") || lowerCaseMessage.includes("cost") || lowerCaseMessage.includes("rent")) {
+                    aiResponse = aiResponses["price"];
+                } else if (lowerCaseMessage.includes("viewing") || lowerCaseMessage.includes("see house") || lowerCaseMessage.includes("visit")) {
+                    aiResponse = aiResponses["viewing"];
+                }
+
+                setTimeout(() => {
+                    addMessageToChat(aiResponse, 'ai');
+                }, 500); // Simulate a slight delay for AI response
+            }
+        });
+
+        // Allow sending message with Enter key
+        chatInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendButton.click();
+            }
+        });
+    </script>
+</body>
+</html>
